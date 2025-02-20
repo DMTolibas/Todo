@@ -1,0 +1,19 @@
+<h1>Update Task </h1>
+
+<form method= "POST" action="">
+
+    {% csrf_token %}
+
+    {{TaskForm}}
+
+    <input class="btn" type="submit" name="Update task" >
+
+{% for task in tasks %}
+
+<ul>
+    <li> <b style = "font-size: 20px">  {{task|title}} </b> 
+     <br>Is completed -  {{task.completed}} <br> Created on <i>{{task.created}}</i></p> </li>
+
+</ul>
+
+{% endfor %}
