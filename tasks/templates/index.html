@@ -17,8 +17,9 @@
 
 <ul>
     
-    <li> <b style = "font-size: 20px">  {{task|title}} </b> 
-    <a href="{% url 'update-task' task.id %}"> Update </a>
+    <li> <b style = "font-size: 20px">  {{task|title}} </b> <br>
+    <a href="{% url 'update-task' task.id %}"> Update </a> 
+    <a href="{% url 'delete-task' task.id %}"> Delete </a>
     <br>Is completed -  {{task.completed}} <br> Created on <i>{{task.created}}</i></p> </li>
 
 </ul>
